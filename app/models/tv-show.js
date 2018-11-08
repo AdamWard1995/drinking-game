@@ -8,10 +8,10 @@ export default EmberObject.extend({
   oneDrink: [],
   twoDrinks: [],
   finishDrink: [],
-  displayName: Ember.computed('title', 'year', function() {
+  displayName: Ember.computed('title', 'season', function() {
     return `${this.get('title')} (Season ${this.get('season')})`;
   }),
-  slug: Ember.computed('displayName', function() {
-    return this.get('displayName').dasherize();
+  slug: Ember.computed('title', 'season', function() {
+    return `${this.get('title')} ${this.get('season')}`.dasherize();
   })
 });

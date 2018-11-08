@@ -11,7 +11,7 @@ export default EmberObject.extend({
   displayName: Ember.computed('title', 'year', function() {
     return `${this.get('title')} (${this.get('year')})`;
   }),
-  slug: Ember.computed('displayName', function() {
-    return this.get('displayName').dasherize();
+  slug: Ember.computed('title', 'year', function() {
+    return `${this.get('title')} ${this.get('year')}`.dasherize();
   })
 });
