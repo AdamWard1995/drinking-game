@@ -1,5 +1,37 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#bs-navbar as |navbar|}}
+  <div class="container-fluid">
+    <div class="navbar-header">
+      {{#link-to "index" class="navbar-brand text-light navbar-link"}}
+        {{fa-icon "beer" size=2}}<div class="app-name">Drinking Game</div>
+      {{/link-to}}
+      {{#link-to "browse" class=" text-light navbar-link"}}
+        Browse
+      {{/link-to}}
+    </div>
+  </div>
+{{/bs-navbar}}
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>
+
+{{#bs-modal backdropClose=false as |modal|}}
+  {{#modal.header}}
+    <h4 class="modal-title">{{fa-icon "alert"}}Disclaimer</h4>
+  {{/modal.header}}
+  {{#modal.body}}
+  This website was created to provide fun drinking games for everyone to
+  enjoy. Remember to always drink responsibly! You should never drive, operate
+  heavy machinery, or perform cognitively demanding tasks while intoxicated. Have
+  fun, but know your limits and play these games at your on risk. By using this website
+  you understand that the creators of this website are not responsible for any harm
+  that happens to you.
+  {{/modal.body}}
+  {{#modal.footer as |footer|}}
+    {{#bs-button onClick=(action modal.close) type="primary"}}I Accept{{/bs-button}}
+  {{/modal.footer}}
+{{/bs-modal}}
+
+{{#bs-navbar backgroundColor="secondary" class="text-light footer" as |navbar|}}
+  Remember to drink responsibly! Play the games provided by this website at your own risk.
+{{/bs-navbar}}

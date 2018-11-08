@@ -1,0 +1,28 @@
+<div class='filter-field'>
+  <h3>Filter</h3>
+  {{input type="text" class="form-control" value=filter placeholder="Enter the title for the movie or TV show you are looking for"}}
+</div>
+{{#if (not (is-empty movies))}}
+  <h1 class='movie-list-header'>Movies</h1>
+  <ul class='movie-list'>
+  {{#each movies as |movie|}}
+    <li class='movie'>
+      {{#link-to 'browse.game' movie.slug}}
+        {{movie.displayName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+  </ul>
+{{/if}}
+{{#if (not (is-empty tvShows))}}
+  <h1 class='tv-show-list-header'>TV Shows</h1>
+  <ul class='tv-show-list'>
+  {{#each tvShows as |show|}}
+    <li class='tv-show'>
+      {{#link-to 'browse.game' show.slug}}
+        {{show.displayName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+  </ul>
+{{/if}}

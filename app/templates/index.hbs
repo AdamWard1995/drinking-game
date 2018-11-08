@@ -1,0 +1,43 @@
+<h1>Welcome to DrinkingGame.com</h1>
+
+<div class='find-game'>
+  <h3>Search for a drinking game</h3>
+  {{#power-select-typeahead
+    search=(action 'searchAsync')
+    selected=selected
+    extra=(hash labelPath='displayName')
+    placeholder='Enter the title of a movie or TV Show'
+    onchange=(action 'selectionHandler') as |game|}}
+    {{game.displayName}}
+  {{/power-select-typeahead}}
+  <h3>OR</h3>
+  {{link-to 'Browse the full collection of games' 'browse'}}
+</div>
+
+<h3 class='new-games-header'>New Drinking Games</h3>
+<div class='new-games'>
+  <div class='new-movies'>
+    <h4>Movies</h4>
+    <ul class='new-movies-list'>
+      {{#each model.newMovies as |movie|}}
+        <li class='movie'>
+          {{#link-to 'browse.game' movie.slug}}
+            {{movie.displayName}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class='new-tv-shows'>
+    <h4>TV Shows</h4>
+    <ul class='new-tv-shows-list'>
+      {{#each model.newTvShows as |show|}}
+        <li class='tv-show'>
+          {{#link-to 'browse.game' show.slug}}
+            {{show.displayName}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

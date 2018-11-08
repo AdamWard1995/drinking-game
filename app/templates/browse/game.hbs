@@ -1,0 +1,27 @@
+{{#if model}}
+  <h1 class='page-header'>{{model.displayName}}</h1>
+  <h3 class='category-header'>Have 1 sip of your drink if:</h3>
+  <ul class='drink-list'>
+    {{#each model.oneDrink as |drink|}}
+      <li class='drink'>{{drink}}</li>
+    {{/each}}
+  </ul>
+  <h3 class='category-header'>Have 2 sips of your drink if:</h3>
+  <ul class='drink-list'>
+    {{#each model.twoDrinks as |drink|}}
+      <li class='drink'>{{drink}}</li>
+    {{/each}}
+  </ul>
+  <h3 class='category-header'>Finish your drink OR have a shot if:</h3>
+  <ul class='drink-list'>
+    {{#each model.finishDrink as |drink|}}
+      <li class='drink'>{{drink}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  <div class="alert alert-danger">
+    <strong>Error!</strong> The drinking game you are looking for does not exist
+    or has been renamed. {{link-to 'Browse' 'browse'}} the full list of games to
+    find the game you are looking for.
+  </div>
+{{/if}}
