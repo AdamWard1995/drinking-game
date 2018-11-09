@@ -79,10 +79,6 @@ body > .ember-view {
   align-items: center;
 }
 
-ins {
-  flex: 1 0 auto;
-}
-
 .modal .close {
   display: none;
 }
