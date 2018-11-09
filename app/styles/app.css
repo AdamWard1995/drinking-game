@@ -65,13 +65,22 @@ body > .ember-view {
   padding: 0 !important;
 }
 
+.main-page {
+  display: flex;
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 15px;
+}
+
 .container {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 15px;
+}
+
+ins {
+  flex: 1 0 auto;
 }
 
 .modal .close {
