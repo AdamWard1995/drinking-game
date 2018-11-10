@@ -184,6 +184,20 @@ const tvShows = [
     twoDrinks: ['A dead body is discovered', 'A clue is discovered', 'Inspector Brackenreid has a drink',
                 'Inspector Brackenreid hits someone', 'Someone is tailing a suspect'],
     finishDrink: ['Terrence Meyers shows up', 'Julia makes a sexual remark or move on Murdoch', 'Someone is thrown into a cell']
+  }),
+  TVShow.create({title: 'The Big Bang Theory', season: '1-12',
+    oneDrink: ['Sheldon doesn\'t pickup on sarcasm or irony', 'Sheldon annoys Leonerd', 'Sheldon or Leonerd are working at their desks',
+              'Sheldon is condescending towards Howard', 'Sheldon kisses Amy',
+              'Leonerd drives Sheldon somewhere', 'Leonerd makes a sarcastic remark to Sheldon',
+              'Penny mooches dinner off the guys', 'Penny is drinking', 'Penny calls Sheldon "sweety"',
+              'Raj makes a flamboyant remark', 'Raj gets drunk', 'Raj cannot talk to a woman',
+              'Howard makes fun of Raj', 'Howard makes a sexual joke or remark',
+              'Bernadette frightens someone or gets angry',
+              'Amy calls Penny "bestie"',
+              'The guys are in the comic book store'],
+    twoDrinks: ['Sheldon says "Bazinga"', 'Howard does a magic trip', 'Someone is sitting in Sheldon\'s spot',
+                'Someone has sex', 'A couple breaks up'],
+    finishDrink: ['Someone meets a celebrity', 'Sheldon gets drunk', 'Sheldon\'s mom scolds him']
   })
 ];
 
