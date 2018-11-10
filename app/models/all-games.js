@@ -140,10 +140,34 @@ const tvShows = [
 ];
 
 const boardGames = [
-  BoardGame.create({title: 'Monopoly',
+  BoardGame.create({title: 'Monopoly', company: 'Hasbro',
     oneDrink: ['One of your opponents passes Go', 'You end up in jail', 'You land on one of your opponent\'s properties'],
     twoDrinks: ['One of your opponents escape jail', 'One of your opponents adds an additional house'],
     finishDrink: ['One of your opponents builds a hotel']
+  }),
+  BoardGame.create({title: 'Risk', company: 'Hasbro',
+    oneDrink: ['One of your opponents conquers one of your territories', 'Your opponent defends the territory you are attacking',
+              'Every 15 minutes of gaming', 'One of your opponents controls 3 adjacent territories at the end of their turn'],
+    twoDrinks: ['Any player rolls a six', 'All players accept the one with the most territories at the end of the round',
+                'One of your opponents controls 5 adjacent territories at the end of their turn'],
+    finishDrink: ['A dice roll between any 2 players ends in a tie', 'One of your opponents controls 7 adjacent territories at the end of their turn']
+  }),
+  BoardGame.create({title: 'Clue', company: 'Hasbro',
+    oneDrink: ['You have to show one of your cards to an opponent', 'You enter a new room', 'You force an opponent into a new room',
+              'Everytime you can check off a new square on your game card'],
+    twoDrinks: ['Any player rolls a six', 'You finish a turn in the same room you started'],
+    finishDrink: ['You end a turn not in any room']
+  }),
+  BoardGame.create({title: 'Chutes and Ladders Game', company: 'Hasbro',
+    oneDrink: ['You climb up a ladder', 'Any player rolls a 6'],
+    twoDrinks: ['Any of your opponents climbs up a ladder', 'Any two players are on the same square'],
+    finishDrink: ['You fall down a chute']
+  }),
+  BoardGame.create({title: 'Uno', company: 'Mattel',
+    oneDrink: ['The game switches directions', 'The colour to play changes', 'You force an opponent to pick up cards',
+              'Any players plays a 10', 'The pickup pile runs out of cards'],
+    twoDrinks: ['Your turn is skipped', 'Someone says "uno" (down to last card)', 'Any chain of 2 pickup cards'],
+    finishDrink: ['Any chain of 3 pickup cards']
   })
 ];
 

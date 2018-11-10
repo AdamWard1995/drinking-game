@@ -1,6 +1,6 @@
 <div class='filter-field'>
   <h3>Filter</h3>
-  {{input type="text" class="form-control" value=filter placeholder="Enter the title for the movie or TV show you are looking for"}}
+  {{input type="text" class="form-control" value=filter placeholder="Enter the title for the movie, TV show, or game you are looking for"}}
 </div>
 {{#if (not (is-empty movies))}}
   <h1 class='movie-list-header'>Movies</h1>
@@ -28,7 +28,7 @@
 {{/if}}
 
 {{#if (not (is-empty boardGames))}}
-  <h1 class='board-game-list-header'>Board Games</h1>
+  <h1 class='board-game-list-header'>Board and Card Games</h1>
   <ul class='board-game-list'>
   {{#each boardGames as |game|}}
     <li class='board-game'>

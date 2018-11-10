@@ -6,9 +6,9 @@ export default Ember.Route.extend({
     const numMovies = AllGames.movies.length;
     const numTvShows = AllGames.tvShows.length;
     return {
-      allGames: [].concat(AllGames.movies).concat(AllGames.tvShows),
-      newMovies: AllGames.movies.slice(numMovies - 4, numMovies),
-      newTvShows: AllGames.tvShows.slice(numTvShows - 4, numTvShows)
+      allGames: [].concat(AllGames.movies).concat(AllGames.tvShows).concat(AllGames.boardGames),
+      newMovies: AllGames.movies.slice(numMovies - 3, numMovies),
+      newTvShows: AllGames.tvShows.slice(numTvShows - 3, numTvShows)
     };
   }
 });

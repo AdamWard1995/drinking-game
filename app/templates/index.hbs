@@ -1,9 +1,14 @@
 <h1>Welcome to EpicDrinkingGames.com</h1>
 <p>
-  &emsp;&emsp;We have a large collection of drinking games for a variety of different Movies and TV Shows.
-  We are constantly updating our collection so remember to check back regularily. To help fund the
-  continued growth of the website, please do not use an AdBlocker while browsing this website. Have
-  fun but remember to always drink responsibly.
+  &emsp;&emsp;We have a large collection of drinking games for a variety of different Movies, TV Shows,
+  Board games, and Card games. We are constantly updating our collection so remember to check back regularily.
+  To help fund the continued growth of the website, please do not use an AdBlocker while browsing this website.
+  Have fun but remember to always drink responsibly.
+</p>
+<p>
+  &emsp;&emsp;Our games are developed with the expectation that you play these games with beer or a typical cooler.
+  However, you can play these games with any drink. Not feeling drunk enough? You can make a strong mixed
+  drink and if that still isn't doing it for you then do a 1/2 or full shot instead.
 </p>
 <div class='find-game'>
   <h3>Search for a drinking game</h3>
@@ -11,11 +16,11 @@
     search=(action 'searchAsync')
     selected=selected
     extra=(hash labelPath='displayName')
-    placeholder='Enter the title of a movie or TV Show'
+    placeholder='Enter the title of a movie, TV Show, or game'
     onchange=(action 'selectionHandler') as |game|}}
     {{game.displayName}}
   {{/power-select-typeahead}}
-  <h3>OR</h3>
+  <h4>OR</h4>
   {{link-to 'Browse the full collection of games' 'browse'}}
 </div>
 
