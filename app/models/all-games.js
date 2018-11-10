@@ -1,6 +1,7 @@
 import Movie from 'drinking-game/models/movie';
 import TVShow from 'drinking-game/models/tv-show';
 import BoardGame from 'drinking-game/models/board-game';
+import VideoGame from 'drinking-game/models/video-game';
 
 const movies = [
   Movie.create({title: 'Larry the Cable Guy: Health Inspector', year: '2006',
@@ -136,6 +137,53 @@ const tvShows = [
               'Peter gets hurt', 'Peter makes a dumb purchase', 'Lois gets mad at Peter', 'Someone makes fun of Meg', 'Someone has sex'],
     twoDrinks: ['There is a cutaway', 'The show makes fun of a celebrity', 'Someone gets drunk'],
     finishDrink: ['Someone dies', 'Brian and/or Stewie time travel', 'Peter gets into a fight']
+  }),
+  TVShow.create({title: 'Everybody Loves Raymond', season: '1-9',
+    oneDrink: ['Ray is watching TV', 'Ray lies to keep the peace', 'Marie is condesending towards Debra',
+              'Debra gets upset with Ray', 'Debra comes home with the kids', 'Robert taps his chin',
+              'Ray goes to his parent\'s house'],
+    twoDrinks: ['Robert complains or is jealous of Ray', 'Frank makes a mean joke about Marie',
+                'Marie offers Ray food', 'Someone says "everybody loves Raymond"'],
+    finishDrink: ['Frank is cheap', 'Ray tries to hide from someone']
+  }),
+  TVShow.create({title: 'Hockey Night in Canada', season: '1952-Present',
+    oneDrink: ['A goal is scored', 'A penalty is called', 'Someone goes offside', 'Icing is called',
+              'A shot is blocked', 'Don Cherry cuts off Ron MacLean', 'Someone is knocked down by a hit'],
+    twoDrinks: ['Don Cherry is critical of someone\'s play', 'Ref gets hit by the puck', 'A goalie stops a breakaway or penalty shot'],
+    finishDrink: ['There is a fight', 'Game goes to overtime', 'Don Cherry says "keep your stick off the ice"']
+  }),
+  TVShow.create({title: 'Ghost Adventures', season: '1-Present',
+    oneDrink: ['Capture a light anomaly on camera', 'Capture and EVP on a recorder or camera',
+              'A voice comes through the spirit box', 'Hear a bang or footsteps', 'One of the guys swear',
+              'One of the guys claim to be affected or touched by a spirit'],
+    twoDrinks: ['One of the guys claim the energy in the room has changed', 'Zak wears a mask',
+                'One of the guys needs to go outside for some air or to calm down'],
+    finishDrink: ['Capture a figure on camera', 'See an object move on camera']
+  }),
+  TVShow.create({title: 'White Collar', season: '1-6',
+    oneDrink: ['Neal doesn\'t listen to Peter', 'Neal lies to Peter', 'Neal puts on a hat', 'Neal smiles',
+              'Mozzie drinks wine', 'Mozzie has a conspiracy theory', 'Mozzie calls Peter "the suit" or Elizabeth "Mrs. Suit"',
+              'Peter is suspicious of Neal', 'Peter drinks coffee', 'Elizabeth is nice to Neal or Mozzie'],
+    twoDrinks: ['Peter draws his gun', 'Neal admits to one of his crimes', 'Neal cuts his anklet', 'Elizabeth helps with a case'],
+    finishDrink: ['Someone is killed', 'Neal is arrested', 'One of Neal\'s aliases is revealed']
+  }),
+  TVShow.create({title: 'Prison Break', season: '1-5',
+    oneDrink: ['Michael hugs Lincoln', 'Michael flirts with or protects Sarah', 'Michael is in the infirmary',
+              'Lincoln punches someone', 'Lincoln yells "LJ"', 'Brad Bellick antogonizes someone',
+              'Bagwell shows his tongue', 'Bagwell says "pretty"', 'Sucre helps Michael', 'Sucre calls someone "Papi"',
+              'Alex Mahone lies or tries to kill someone', 'Someone mentions "The Company" or "Scylla"',
+              'Someone is looking down the barrel of a gun', 'Someone calls Bagwell "T-Bag"'],
+    twoDrinks: ['Someone is killed', 'Someone gets betrayed', 'A gun is fired'],
+    finishDrink: ['Michael uses his tatoos', 'Michael escapes prison or a near death situation']
+  }),
+  TVShow.create({title: 'Murdoch Mysteries', season: '1-Present',
+    oneDrink: ['George has a crazy theory', 'George says "Higgins"', 'George flirts with or is escorting a woman',
+              'George calls detective Murdoch "sir"', 'Inspector Brackenreid gets mad', 'Inspector Brackenreid calls someone "bugalugs"',
+              'Henry screws something up', 'Murdoch visits the Morgue', 'Murdoch has a new invention', 'Murdoch says "Toronto Constabulary"',
+              'Julia says "William"'],
+    twoDrinks: ['A dead body is discovered', 'A clue is discovered', 'Inspector Brackenreid has a drink',
+                'Inspector Brackenreid hits someone', 'Someone is tailing a suspect'],
+    finishDrink: ['Terrence Meyers shows up', 'Julia makes a sexual remark or move on Murdoch', 'Someone is thrown into a cell']
   })
 ];
 
@@ -171,4 +219,17 @@ const boardGames = [
   })
 ];
 
-export default {movies, tvShows, boardGames};
+const videoGames = [
+  VideoGame.create({title: 'NHL 18', year: '2017',
+    oneDrink: ['You deke out your opponent', 'You get a penalty', 'You go offside', 'You ice the puck', 'You lose a faceoff'],
+    twoDrinks: ['Your opponent scores a goal on you', 'One of your shots gets blocked', 'Your player\'s stick breaks'],
+    finishDrink: ['You lose a fight', 'You don\'t score when on a breakaway or penalty shot']
+  }),
+  VideoGame.create({title: 'NHL 19', year: '2018',
+    oneDrink: ['You deke out your opponent', 'You get a penalty', 'You go offside', 'You ice the puck', 'You lose a faceoff'],
+    twoDrinks: ['Your opponent scores a goal on you', 'One of your shots gets blocked', 'Your player\'s stick breaks'],
+    finishDrink: ['You lose a fight', 'You don\'t score when on a breakaway or penalty shot']
+  })
+];
+
+export default {movies, tvShows, boardGames, videoGames};

@@ -27,6 +27,19 @@
   </ul>
 {{/if}}
 
+{{#if (not (is-empty videoGames))}}
+  <h1 class='video-game-list-header'>Video Games</h1>
+  <ul class='video-game-list'>
+  {{#each videoGames as |game|}}
+    <li class='video-game'>
+      {{#link-to 'browse.game' game.slug}}
+        {{game.displayName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+  </ul>
+{{/if}}
+
 {{#if (not (is-empty boardGames))}}
   <h1 class='board-game-list-header'>Board and Card Games</h1>
   <ul class='board-game-list'>

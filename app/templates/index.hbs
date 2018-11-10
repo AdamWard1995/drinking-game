@@ -50,4 +50,16 @@
       {{/each}}
     </ul>
   </div>
+  <div class='new-video-games'>
+    <h4>Video Games</h4>
+    <ul class='new-video-games-list'>
+      {{#each model.newVideoGames as |game|}}
+        <li class='video-game'>
+          {{#link-to 'browse.game' game.slug}}
+            {{game.displayName}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

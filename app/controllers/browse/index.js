@@ -46,5 +46,20 @@ export default Ember.Controller.extend({
       });
     }
     return boardGames.sortBy('slug');
+  }),
+  videoGames: Ember.computed('model', 'filter', function() {
+    let videoGames = this.get('model').videoGames
+    if (this.get('filter')) {
+      const tokens = this.get('filter').split(' ').map((t) => {return t.toLowerCase();})
+      videoGames = videoGames.filter((show) => {
+        for (let tok of tokens) {
+          if (!show.get('title').toLowerCase().includes(tok)) {
+            return false;
+          }
+        }
+        return true;
+      });
+    }
+    return videoGames.sortBy('slug');
   })
 });

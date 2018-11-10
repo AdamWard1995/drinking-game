@@ -109,7 +109,8 @@ body > .ember-view {
 
 .movie-list,
 .tv-show-list,
-.board-game-list {
+.board-game-list,
+.video-game-list {
   width: 100%;
   -moz-column-count: 3;
   -moz-column-gap: 5px;
@@ -123,7 +124,8 @@ body > .ember-view {
 
 .movie-list-header,
 .tv-show-list-header,
-.board-game-list-header {
+.board-game-list-header,
+.video-game-list-header {
   width: 100%;
   margin: 10px 0;
   padding-bottom: 10px;
@@ -133,7 +135,8 @@ body > .ember-view {
 
 .movie,
 .tv-show,
-.board-game {
+.board-game,
+.video-game {
   margin-bottom: 5px;
 }
 
@@ -145,7 +148,7 @@ body > .ember-view {
 }
 
 .filter-field input {
-  flex: 1 0 auto;
+  width: calc(100% - 50px);
   margin-left: 15px;
 }
 
@@ -162,14 +165,16 @@ body > .ember-view {
 }
 
 .new-movies,
-.new-tv-shows {
+.new-tv-shows,
+.new-video-games {
   display: flex;
   flex-direction: column;
   margin: 0 30px;
 }
 
 .new-movies-list,
-.new-tv-shows-list {
+.new-tv-shows-list,
+.new-video-games-list {
   list-style-type: none;
   padding-inline-start: 0 !important;
 }
