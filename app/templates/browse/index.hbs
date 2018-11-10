@@ -26,3 +26,16 @@
   {{/each}}
   </ul>
 {{/if}}
+
+{{#if (not (is-empty boardGames))}}
+  <h1 class='board-game-list-header'>Board Games</h1>
+  <ul class='board-game-list'>
+  {{#each boardGames as |game|}}
+    <li class='board-game'>
+      {{#link-to 'browse.game' game.slug}}
+        {{game.displayName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+  </ul>
+{{/if}}

@@ -1,5 +1,6 @@
 import Movie from 'drinking-game/models/movie';
 import TVShow from 'drinking-game/models/tv-show';
+import BoardGame from 'drinking-game/models/board-game';
 
 const movies = [
   Movie.create({title: 'Larry the Cable Guy: Health Inspector', year: '2006',
@@ -41,6 +42,14 @@ const movies = [
               'Mitchell does something he doesn\'t want to', 'One of the parents reconciles with their kid'],
     twoDrinks: ['Someone pukes', 'Kayla does drugs', 'They catch Auston\'s parents having sex'],
     finishDrink: ['Hunter gets knocked down', 'Someone mentions Hunter cheated on his wife']
+  }),
+  Movie.create({title: 'The Lord of the Rings: The Fellowship of the Ring', year: '2001',
+    oneDrink: ['Someone smokes a pipe', 'Merry and Pippin get into michief', 'A ringwraith appears',
+              'Sam stands up for Frodo', 'Strider/Aragorn defends the Hobbits', 'Frodo gets away from a ringwraith',
+              'Boromir acts sketchy', 'Legolas fires an arrow', 'Someone tries to take the ring from Frodo',
+              'Someone sees the eye of Sauron'],
+    twoDrinks: ['Someone goes into hiding', 'Frodo wears the ring', 'Gandalf gets mad at Merry or Pippen'],
+    finishDrink: ['Someone gets betrayed', 'Someone speaks in Elvish']
   })
 ];
 
@@ -120,7 +129,22 @@ const tvShows = [
     twoDrinks: ['Leslie runs a meeting or public forum', 'Andy shines someone\'s shoes', 'Tammy tries to seduce or control Ron',
                 'Jamm is obnoxious', 'Ron builds something', 'Ben makes an accounting joke'],
     finishDrink: ['See Little Sebastien', 'Ben quits his job', 'April tells someone she loves them', 'Ron smiles or laughs']
+  }),
+  TVShow.create({title: 'Family Guy', season: '1-Present',
+    oneDrink: ['Peter is a bad husband', 'Peter is a bad father', 'Brian has a drink', 'Stewie plots to kill his mom',
+              'Stewie has a new invention', 'Quagmire says "giggity"', 'Cleveland laughs', 'Joe says something depressing',
+              'Peter gets hurt', 'Peter makes a dumb purchase', 'Lois gets mad at Peter', 'Someone makes fun of Meg', 'Someone has sex'],
+    twoDrinks: ['There is a cutaway', 'The show makes fun of a celebrity', 'Someone gets drunk'],
+    finishDrink: ['Someone dies', 'Brian and/or Stewie time travel', 'Peter gets into a fight']
   })
 ];
 
-export default {movies, tvShows};
+const boardGames = [
+  BoardGame.create({title: 'Monopoly',
+    oneDrink: ['One of your opponents passes Go', 'You end up in jail', 'You land on one of your opponent\'s properties'],
+    twoDrinks: ['One of your opponents escape jail', 'One of your opponents adds an additional house'],
+    finishDrink: ['One of your opponents builds a hotel']
+  })
+];
+
+export default {movies, tvShows, boardGames};

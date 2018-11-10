@@ -31,5 +31,20 @@ export default Ember.Controller.extend({
       });
     }
     return tvShows.sortBy('slug');
+  }),
+  boardGames: Ember.computed('model', 'filter', function() {
+    let boardGames = this.get('model').boardGames
+    if (this.get('filter')) {
+      const tokens = this.get('filter').split(' ').map((t) => {return t.toLowerCase();})
+      boardGames = boardGames.filter((show) => {
+        for (let tok of tokens) {
+          if (!show.get('title').toLowerCase().includes(tok)) {
+            return false;
+          }
+        }
+        return true;
+      });
+    }
+    return boardGames.sortBy('slug');
   })
 });
