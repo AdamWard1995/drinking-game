@@ -63,6 +63,20 @@ const movies = [
               'Someone gets kicked', 'Leonidas kills someone', 'One of the Spartans hits someone with their shield', 'One of the Spartans throws a spear'],
     twoDrinks: ['Someone calls Xerxes a god', 'The Spartans stop a Persian attack', 'Spartans are training'],
     finishDrink: ['The Persians fire a volley of arrows', 'A Persian messager approaches the Spartans']
+  }),
+  Movie.create({title: 'Jackass 3D', year: '2010',
+    oneDrink: ['Johnny Knoxville laughs', 'Bam punches someone', 'Preston or Wee Man don\'t have a shirt on',
+              'Chris Pontius is wearing bunny ears or a speedo', 'Someone is laying on the ground in pain', 'Someone is pranked'],
+    twoDrinks: ['Someone is launched into the air', 'Someone is hit in the head', 'Someone is hurt by an animal'],
+    finishDrink: ['Someone is bleeding']
+  }),
+
+  Movie.create({title: 'Fantastic Beasts and Where to Find Them', year: '2016',
+    oneDrink: ['You see one of the creatures', 'Newt\'s suitcase is opened', 'Queenie reads someone\'s mind',
+              'Jacob is confused or amazed by something magical', 'Someone teleports', 'Someone casts a spell',
+              'Someone screams'],
+    twoDrinks: ['Newt catches one of his escaped creatures', 'Someone calls a mogul a "no mag"'],
+    finishDrink: ['Newt defends or expresses empathy for one of his creatures']
   })
 ];
 
