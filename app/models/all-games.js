@@ -57,6 +57,12 @@ const movies = [
               'A gun is fired', 'Diana blocks a bullet with her wrist guard', 'Diana jumps high or far', 'Sir Patrick says "armistice"'],
     twoDrinks: ['Ludendorff inhales his mysterious powder', 'The Lasson of Truth is used', 'Poisonous gas is used'],
     finishDrink: ['Charlie sings', 'Steve Trevor flies a plane']
+  }),
+  Movie.create({title: '300', year: '2006',
+    oneDrink: ['Someone asks for the Spartan\'s surrender', 'One of the Spartans is killed', 'Theron acts creepy or betrays his people',
+              'Someone gets kicked', 'Leonidas kills someone', 'One of the Spartans hits someone with their shield', 'One of the Spartans throws a spear'],
+    twoDrinks: ['Someone calls Xerxes a god', 'The Spartans stop a Persian attack', 'Spartans are training'],
+    finishDrink: ['The Persians fire a volley of arrows', 'A Persian messager approaches the Spartans']
   })
 ];
 
