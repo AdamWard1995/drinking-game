@@ -70,13 +70,18 @@ const movies = [
     twoDrinks: ['Someone is launched into the air', 'Someone is hit in the head', 'Someone is hurt by an animal'],
     finishDrink: ['Someone is bleeding']
   }),
-
   Movie.create({title: 'Fantastic Beasts and Where to Find Them', year: '2016',
     oneDrink: ['You see one of the creatures', 'Newt\'s suitcase is opened', 'Queenie reads someone\'s mind',
-              'Jacob is confused or amazed by something magical', 'Someone teleports', 'Someone casts a spell',
-              'Someone screams'],
+              'Jacob is confused or amazed by something magical', 'An Obscurus appears',
+              'Someone teleports', 'Someone casts a spell', 'Someone screams'],
     twoDrinks: ['Newt catches one of his escaped creatures', 'Someone calls a mogul a "no mag"'],
     finishDrink: ['Newt defends or expresses empathy for one of his creatures']
+  }),
+  Movie.create({title: 'Get Him to the Greek', year: '2010',
+    oneDrink: ['Aldous drinks or does drugs', 'Aaron is drunk or high', 'Aaron and Aldous miss a flight or change their flight',
+              'Sergio gets angry', 'Sergio says "mind fuck"', 'Someone says "African Child"'],
+    twoDrinks: ['Aaron has something put up his butt', 'Aldous performs', 'Someone strokes a furry wall'],
+    finishDrink: ['Aaron pukes']
   })
 ];
 
