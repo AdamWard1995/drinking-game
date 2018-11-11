@@ -82,6 +82,21 @@ const movies = [
               'Sergio gets angry', 'Sergio says "mind fuck"', 'Someone says "African Child"'],
     twoDrinks: ['Aaron has something put up his butt', 'Aldous performs', 'Someone strokes a furry wall'],
     finishDrink: ['Aaron pukes']
+  }),
+  Movie.create({title: '21 Jump Street', year: '2012',
+    oneDrink: ['Schmidt chokes up', 'Jenko does something "sciencey"', 'Captain Dickson gets mad or raises his voice',
+              'Mr. Walters is eating chips', 'Molly kisses someone', 'There is a car chase', 'A gun is fired',
+              'Someone gets punched'],
+    twoDrinks: ['Ms. Griggs is turned on by Jenko', 'Someone does HFS'],
+    finishDrink: ['Schmidt or Jenko arrest someone']
+  }),
+  Movie.create({title: '22 Jump Street', year: '2014',
+    oneDrink: ['Schmidt feels left out', 'Jenko does something athletic that Schmidt can\'t', 'Jenko has a drink',
+              'Jenko and Zook are working out', 'Jenko drives their vehicle', 'Captain Dickson gets mad or raises his voice',
+              'Mercedes suggests Schmidt is old', 'Someone gets shot'],
+    twoDrinks: ['Jenko catches a pass from Zook', 'Captain Dickson says "it\'s the same case" or "do the same thing"',
+                'Ghost gets away'],
+    finishDrink: ['Jenko lets Schmidt drive']
   })
 ];
 
