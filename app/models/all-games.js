@@ -51,6 +51,12 @@ const movies = [
               'Someone sees the eye of Sauron'],
     twoDrinks: ['Someone goes into hiding', 'Frodo wears the ring', 'Gandalf gets mad at Merry or Pippen'],
     finishDrink: ['Someone gets betrayed', 'Someone speaks in Elvish']
+  }),
+  Movie.create({title: 'Wonder Woman', year: '2017',
+    oneDrink: ['Someone says "Aries"', 'Diana or Sameer speak a different language', 'Diana doesn\'t understand something Steve Trevor says',
+              'A gun is fired', 'Diana blocks a bullet with her wrist guard', 'Diana jumps high or far', 'Sir Patrick says "armistice"'],
+    twoDrinks: ['Ludendorff inhales his mysterious powder', 'The Lasson of Truth is used', 'Poisonous gas is used'],
+    finishDrink: ['Charlie sings', 'Steve Trevor flies a plane']
   })
 ];
 
