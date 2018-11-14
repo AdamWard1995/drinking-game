@@ -13,16 +13,24 @@ body > .ember-view {
 }
 
 .navbar {
-  height: 75px;
   flex: 0 0 auto;
   background-color: #337ab7 !important;
   border-radius: 0 !important;
+}
+
+.navbar-desktop {
+  padding: 0 !important;
+}
+
+.navbar-mobile .navbar-brand {
+  padding-left: 10px;
 }
 
 .navbar-header {
   display: flex;
   align-items: center;
   width: 100%;
+  overflow-x: auto;
 }
 
 .navbar-brand {
@@ -37,7 +45,7 @@ body > .ember-view {
 }
 
 .navbar-brand .app-name {
-  font-size: 24px;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
@@ -52,7 +60,6 @@ body > .ember-view {
 }
 
 .navbar-link:hover {
-  height: 85px;
   background-color: #235580;
   color: white;
   cursor: pointer;
@@ -67,11 +74,15 @@ body > .ember-view {
 
 .main-page {
   display: flex;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   width: 100%;
   height: calc(100% - 125px);
   padding: 15px;
   overflow: auto;
+}
+
+.vertical-ad {
+  flex: 1 0 160px;
 }
 
 .container {
@@ -190,6 +201,7 @@ body > .ember-view {
 .find-game {
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
   width: 100%;
   align-items: center;
 }
@@ -198,11 +210,30 @@ body > .ember-view {
   margin: 20px 0;
 }
 
+.level {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.level label {
+  margin-right: 10px;
+  margin-bottom: 0 !important;
+  font-weight: bold;
+}
+
+.select-level {
+  flex: 0 0 auto;
+  width: auto !important;
+}
+
 .footer {
   display: flex;
   flex: 0 0 auto;
   justify-content: center;
   height: 50px;
   margin: 0 !important;
-  font-size: 16px;
+  font-size: 0.75em;
 }

@@ -1,23 +1,35 @@
 {{#if model}}
   <h1 class='page-header'>{{model.displayName}}</h1>
+  <div class='level'>
+    <label for='select-level'>Level</label>
+    <select class='form-control select-level' id='select-level' onchange={{action (mut level) value='target.value'}}>
+      {{#each levels as |l|}}
+        <option value={{l.value}} selected={{eq l.value level}}>{{l.name}}</option>
+      {{/each}}
+    </select>
+  </div>
   <h3 class='category-header'>Have 1 sip of your drink when...</h3>
   <ul class='drink-list'>
-    {{#each model.oneDrink as |drink|}}
+    {{#each rules.oneDrink as |drink|}}
       <li class='drink'>{{drink}}</li>
     {{/each}}
   </ul>
-  <h3 class='category-header'>Have 2 sips of your drink when...</h3>
-  <ul class='drink-list'>
-    {{#each model.twoDrinks as |drink|}}
-      <li class='drink'>{{drink}}</li>
-    {{/each}}
-  </ul>
-  <h3 class='category-header'>Finish your drink OR have a shot when...</h3>
-  <ul class='drink-list'>
-    {{#each model.finishDrink as |drink|}}
-      <li class='drink'>{{drink}}</li>
-    {{/each}}
-  </ul>
+  {{#if (not (is-empty rules.twoDrinks))}}
+    <h3 class='category-header'>Have 2 sips of your drink when...</h3>
+    <ul class='drink-list'>
+      {{#each rules.twoDrinks as |drink|}}
+        <li class='drink'>{{drink}}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
+  {{#if (not (is-empty rules.finishDrink))}}
+    <h3 class='category-header'>Finish your drink OR have a shot when...</h3>
+    <ul class='drink-list'>
+      {{#each rules.finishDrink as |drink|}}
+        <li class='drink'>{{drink}}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
 {{else}}
   <div class="alert alert-danger">
     <strong>Error!</strong> The drinking game you are looking for does not exist
