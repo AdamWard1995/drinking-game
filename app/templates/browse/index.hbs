@@ -2,10 +2,10 @@
   <h3>Filter</h3>
   {{input type="text" class="form-control" value=filter placeholder="Enter the title for the movie, TV show, or game you are looking for"}}
 </div>
-{{#if (not (is-empty movies))}}
+{{#if (not (is-empty filteredMovies))}}
   <h1 class='movie-list-header'>Movies</h1>
   <ul class='movie-list'>
-  {{#each movies as |movie|}}
+  {{#each filteredMovies as |movie|}}
     <li class='movie'>
       {{#link-to 'browse.game' movie.slug}}
         {{movie.displayName}}
@@ -14,10 +14,10 @@
   {{/each}}
   </ul>
 {{/if}}
-{{#if (not (is-empty tvShows))}}
+{{#if (not (is-empty filteredTvShows))}}
   <h1 class='tv-show-list-header'>TV Shows</h1>
   <ul class='tv-show-list'>
-  {{#each tvShows as |show|}}
+  {{#each filteredTvShows as |show|}}
     <li class='tv-show'>
       {{#link-to 'browse.game' show.slug}}
         {{show.displayName}}
@@ -27,10 +27,10 @@
   </ul>
 {{/if}}
 
-{{#if (not (is-empty videoGames))}}
+{{#if (not (is-empty filteredVideoGames))}}
   <h1 class='video-game-list-header'>Video Games</h1>
   <ul class='video-game-list'>
-  {{#each videoGames as |game|}}
+  {{#each filteredVideoGames as |game|}}
     <li class='video-game'>
       {{#link-to 'browse.game' game.slug}}
         {{game.displayName}}
@@ -40,10 +40,10 @@
   </ul>
 {{/if}}
 
-{{#if (not (is-empty boardGames))}}
+{{#if (not (is-empty filteredBoardGames))}}
   <h1 class='board-game-list-header'>Board and Card Games</h1>
   <ul class='board-game-list'>
-  {{#each boardGames as |game|}}
+  {{#each filteredBoardGames as |game|}}
     <li class='board-game'>
       {{#link-to 'browse.game' game.slug}}
         {{game.displayName}}

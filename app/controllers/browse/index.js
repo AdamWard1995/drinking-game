@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   filter: '',
-  movies: Ember.computed('model', 'filter', function() {
-    let movies = this.get('model').movies
+  movies: Ember.computed('model', function() {
+    return this.get('model').filter(game => game.movie);
+  }),
+  filteredMovies: Ember.computed('movies', 'filter', function() {
+    let movies = this.get('movies')
     if (this.get('filter')) {
       const tokens = this.get('filter').split(' ').map((t) => {return t.toLowerCase();});
       movies = movies.filter((movie) => {
@@ -17,8 +20,11 @@ export default Ember.Controller.extend({
     }
     return movies.sortBy('slug');
   }),
-  tvShows: Ember.computed('model', 'filter', function() {
-    let tvShows = this.get('model').tvShows
+  tvShows: Ember.computed('model', function() {
+    return this.get('model').filter(game => game.tvShow);
+  }),
+  filteredTvShows: Ember.computed('tvShows', 'filter', function() {
+    let tvShows = this.get('tvShows')
     if (this.get('filter')) {
       const tokens = this.get('filter').split(' ').map((t) => {return t.toLowerCase();})
       tvShows = tvShows.filter((show) => {
@@ -32,8 +38,11 @@ export default Ember.Controller.extend({
     }
     return tvShows.sortBy('slug');
   }),
-  boardGames: Ember.computed('model', 'filter', function() {
-    let boardGames = this.get('model').boardGames
+  boardGames: Ember.computed('model', function() {
+    return this.get('model').filter(game => game.boardGame);
+  }),
+  filteredBoardGames: Ember.computed('boardGames', 'filter', function() {
+    let boardGames = this.get('boardGames')
     if (this.get('filter')) {
       const tokens = this.get('filter').split(' ').map((t) => {return t.toLowerCase();})
       boardGames = boardGames.filter((show) => {
@@ -47,8 +56,11 @@ export default Ember.Controller.extend({
     }
     return boardGames.sortBy('slug');
   }),
-  videoGames: Ember.computed('model', 'filter', function() {
-    let videoGames = this.get('model').videoGames
+  videoGames: Ember.computed('model', function() {
+    return this.get('model').filter(game => game.videoGame);
+  }),
+  filteredVideoGames: Ember.computed('model', 'filter', function() {
+    let videoGames = this.get('videoGames')
     if (this.get('filter')) {
       const tokens = this.get('filter').split(' ').map((t) => {return t.toLowerCase();})
       videoGames = videoGames.filter((show) => {

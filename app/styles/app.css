@@ -172,22 +172,18 @@ body > .ember-view {
 }
 
 .new-games {
-  display: flex;
-}
-
-.new-movies,
-.new-tv-shows,
-.new-video-games {
-  display: flex;
-  flex-direction: column;
-  margin: 0 30px;
-}
-
-.new-movies-list,
-.new-tv-shows-list,
-.new-video-games-list {
-  list-style-type: none;
   padding-inline-start: 0 !important;
+  list-style-type: none;
+  -moz-column-count: 3;
+  -moz-column-gap: 5px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 5px;
+  column-count: 3;
+  column-gap: 5px;
+}
+
+.new-game strong {
+  margin-right: 3px;
 }
 
 .ember-power-select-trigger {

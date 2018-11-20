@@ -3,7 +3,7 @@ import TVShow from 'drinking-game/models/tv-show';
 import BoardGame from 'drinking-game/models/board-game';
 import VideoGame from 'drinking-game/models/video-game';
 
-const movies = [
+const allGames = [
   Movie.create({title: 'Larry the Cable Guy: Health Inspector', year: '2006',
     oneDrink: ['Someone says "dickweed"', 'Donnie throws a soccer ball', 'Larry Tries to help Jack',
               'Someone farts', 'Larry suggests Butlin is a boy', 'Larry refers to himself in the 3rd person',
@@ -98,10 +98,7 @@ const movies = [
     twoDrinks: ['Jenko catches a pass from Zook', 'Captain Dickson says "it\'s the same case" or "do the same thing"',
                 'Ghost gets away'],
     finishDrink: ['Jenko lets Schmidt drive']
-  })
-];
-
-const tvShows = [
+  }),
   TVShow.create({title: 'Two and a Half Men', season: '1',
     oneDrink: ['Charlie makes fun of Allen', 'Charlie is hungover', 'Charlie has a drink', 'Charlie buys liquor',
               'Charlie uses Jake to pick up a girl', 'Charlie is harsh towards his mom', 'Allen makes a scene',
@@ -242,10 +239,7 @@ const tvShows = [
     twoDrinks: ['Sheldon says "Bazinga"', 'Howard does a magic trip', 'Someone is sitting in Sheldon\'s spot',
                 'Someone has sex', 'A couple breaks up'],
     finishDrink: ['Someone meets a celebrity', 'Sheldon gets drunk', 'Sheldon\'s mom scolds him']
-  })
-];
-
-const boardGames = [
+  }),
   BoardGame.create({title: 'Monopoly', company: 'Hasbro',
     oneDrink: ['One of your opponents passes Go', 'You end up in jail', 'You land on one of your opponent\'s properties'],
     twoDrinks: ['One of your opponents escape jail', 'One of your opponents adds an additional house'],
@@ -274,10 +268,7 @@ const boardGames = [
               'Any players plays a 10', 'The pickup pile runs out of cards'],
     twoDrinks: ['Your turn is skipped', 'Someone says "uno" (down to last card)', 'Any chain of 2 pickup cards'],
     finishDrink: ['Any chain of 3 pickup cards']
-  })
-];
-
-const videoGames = [
+  }),
   VideoGame.create({title: 'NHL 18', year: '2017',
     oneDrink: ['You deke out your opponent', 'You get a penalty', 'You go offside', 'You ice the puck', 'You lose a faceoff'],
     twoDrinks: ['Your opponent scores a goal on you', 'One of your shots gets blocked', 'Your player\'s stick breaks'],
@@ -290,4 +281,4 @@ const videoGames = [
   })
 ];
 
-export default {movies, tvShows, boardGames, videoGames};
+export default allGames;

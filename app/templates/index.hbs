@@ -25,41 +25,27 @@
 </div>
 
 <h3 class='new-games-header'>New Drinking Games</h3>
-<div class='new-games'>
-  <div class='new-movies'>
-    <h4>Movies</h4>
-    <ul class='new-movies-list'>
-      {{#each model.newMovies as |movie|}}
-        <li class='movie'>
-          {{#link-to 'browse.game' movie.slug}}
-            {{movie.displayName}}
-          {{/link-to}}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-  <div class='new-tv-shows'>
-    <h4>TV Shows</h4>
-    <ul class='new-tv-shows-list'>
-      {{#each model.newTvShows as |show|}}
-        <li class='tv-show'>
-          {{#link-to 'browse.game' show.slug}}
-            {{show.displayName}}
-          {{/link-to}}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-  <div class='new-video-games'>
-    <h4>Video Games</h4>
-    <ul class='new-video-games-list'>
-      {{#each model.newVideoGames as |game|}}
-        <li class='video-game'>
-          {{#link-to 'browse.game' game.slug}}
-            {{game.displayName}}
-          {{/link-to}}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-</div>
+<ul class='new-games'>
+  {{#each model.newGames as |game|}}
+    <li class='new-game'>
+      {{#if game.movie}}
+        <strong>[Movie]</strong>
+      {{/if}}
+      {{#if game.tvShow}}
+        <strong>[TV Show]</strong>
+      {{/if}}
+      {{#if game.boardGame}}
+        <strong>[Board Game]</strong>
+      {{/if}}
+      {{#if game.videoGame}}
+        <strong>[Video Game]</strong>
+      {{/if}}
+      {{#if game.partyGame}}
+        <strong>[Party Game]</strong>
+      {{/if}}
+      {{#link-to 'browse.game' game.slug}}
+        {{game.displayName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
