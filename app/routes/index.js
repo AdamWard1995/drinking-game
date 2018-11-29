@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     const numGames = AllGames.length;
     return {
       allGames: AllGames,
-      newGames: AllGames.slice(numGames - 12, numGames)
+      newGames: AllGames.slice(numGames - 12, numGames).reverse()
     };
   }
 });
