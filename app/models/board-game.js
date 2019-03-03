@@ -9,7 +9,10 @@ export default EmberObject.extend({
   twoDrinks: [],
   finishDrink: [],
   displayName: Ember.computed('title', 'company', function() {
-    return `${this.get('title')} (${this.get('company')})`;
+    if (this.get('company')) {
+      return `${this.get('title')} (${this.get('company')})`;
+    }
+    return this.get('title');
   }),
   slug: Ember.computed('title', 'company', function() {
     return `${this.get('title')} ${this.get('company')}`.dasherize();
